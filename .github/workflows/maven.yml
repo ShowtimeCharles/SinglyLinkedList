@@ -31,10 +31,3 @@ jobs:
 
     - name: Run tests
       run: java -jar junit-platform-console-standalone-1.8.2.jar -cp src --scan-class-path
-
-    - name: Upload test results (optional)
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: junit-results
-        path: report.xml
